@@ -2,7 +2,7 @@ export default function Guitar(){
     return(
         <div className="col-md-6 col-lg-4 my-4 row align-items-center">
             <div className="col-4">
-                <img className="img-fluid" src="./public/img/guitarra_01.jpg" alt="imagen guitarra" />
+                <img className="img-fluid" src="/img/guitarra_01.jpg" alt="imagen guitarra" />
             </div>
             <div className="col-8">
                 <h3 className="text-black fs-4 fw-bold text-uppercase">Lukather</h3>
