@@ -1,10 +1,23 @@
+import { useState } from "react"
 import Header from "./components/Header"
 import Guitar from "./components/Guitar"
 import Footer from "./components/Footer"
 import { db } from "./data/db"
+import { useEffect } from "react"
 
 function App() {
-  console.log(db)
+  
+  // "Base de datos" de Guitarras:
+  
+    // State: 
+    const [data, setData] = useState([])
+
+    // useEffect:
+    useEffect(() => {
+      setData(db)
+    }, [])
+
+      //console.log(data)
 
   return (
     <>
@@ -14,7 +27,21 @@ function App() {
             <h2 className="text-center">Colección de instrumentos:</h2>
 
             <div className="row mt-5">
-                <Guitar />
+              
+              { // Recorre el array
+                data.map((data) => {
+                    return(
+                      <Guitar 
+                        id = {data.id}
+                        name = {data.name}
+                        image = {data.image}
+                        description = {data.description}
+                        price = {data.price}
+                      /> // Props
+                    )
+                  }
+                )
+              }          
                 
             </div>
 
