@@ -1,4 +1,5 @@
 export default function Guitar(props){
+    
     return(
         <div className="col-md-6 col-lg-4 my-4 row align-items-center">
             <div className="col-4">

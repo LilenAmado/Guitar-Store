@@ -32,11 +32,14 @@ function App() {
                 data.map((data) => {
                     return(
                       <Guitar 
-                        id = {data.id}
+                        key = {data.id}
                         name = {data.name}
                         image = {data.image}
                         description = {data.description}
                         price = {data.price}
+
+                        // key = {data.id}
+                        // data = {data}
                       /> // Props
                     )
                   }
